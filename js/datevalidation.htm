@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date Validation</title>
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    // regular expression to match required date format
+    re = /^(0?[1-9]|[12][0-9]|3[01])[\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+
+    if(form.startdate.value != '' && !form.startdate.value.match(re)) {
+      alert("Invalid date format: " + form.startdate.value);
+      form.startdate.focus();
+      return false;
+    }
+    alert("All input fields have been validated!");
+    return true;
+  }
+
+</script>
+
+</head>
+<body onload='document.form1.text1.focus()'>
+  <div class="mail">
+    <h1>8. DATE VALIDATION</h1>
+    <form method="POST" action="" onsubmit="return checkForm(this);">
+    <label>Start Date: <input type="text" size="12" placeholder="MM-DD-YYYY" name="startdate"> <small>(MM-DD-YYYY)</small></label>
+    <p><input type="submit"></p>
+      
+</form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+    <head>
+    <title>Math</title>
+    <script>
+    function solve() {
+ 
+    var operators_If = document.getElementsByName("Operators");
+    var a = Number(document.getElementById("first").value);
+    var b = Number(document.getElementById("second").value); 
+ 
+    if (a == "" || b == "") {
+      alert("Please Enter First Number or Please Enter Second Number");
+      return false;
+    }
+
+    if(Number.isNaN(a) || Number.isNaN(b)) {
+        alert("Please enter only numberic values");
+        return false;
+    }
+     
+    if (operators_If[0].checked == true) {
+      sum = parseInt(a) + parseInt(b);             
+      results = "<span class='message'> Result is:- "+a+"+"+b+"="+sum+".</span>";
+    } 
+    else if (operators_If[1].checked == true) {
+      diff = parseInt(a) - parseInt(b);         
+      results = "<span class='message'> Result is:- "+a+"-"+b+"="+diff+".</span>";
+    } 
+    else if (operators_If[2].checked == true) {
+      product = parseInt(a) *parseInt(b);         
+      results = "<span class='message'> Result is:- "+a+"*"+b+"="+product+".</span>";
+    } 
+    else if (operators_If[3].checked == true) {
+      quotient = parseInt(a) / parseInt(b);
+      results = "<span class='message'> Result is:- "+a+"+"+b+"="+quotient+".</span>";
+    } 
+    else {
+      var math_Results = alert("Please Select Operation That You Have To Perform:-");
+      document.getElementById('math_Results').innerHTML = math_Results;
+      return false;
+    }
+    document.getElementById('math_Results').innerHTML = results;
+    return false;
+  }
+  function reset_Operators() {
+    document.getElementById('math_Results').innerHTML = '';
+  }
+  function reset(){
+    document.getElementById('math_Results').innerHTML = "";
+    a="";
+    b="";
+    a.focus();
+  }
+</script>
+    <title>
+    Calculator
+    </title>
+</head>
+<body>
+<h1>10. CALCULATOR WITH THE USE OF TEXTBOX LABEL RADIO BUTTON</h1>
+<form action="" method="POST">
+  <table>
+    <tr>
+      <td><label>Please Enter First Number:-</label><br /><input type="text" name="a" id="first" autofocus="autofocus"></td>
+    </tr>
+    <tr>
+      <td><label>Please Enter Second Number:-</label><br /><input type="text" name="b" id="second"></td>
+    </tr>
+  </table>
+  <h2>Math Operators</h2>
+  <table>
+    <tr>
+      <td><label><input type="radio" name="Operators" onclick="reset_Operators();" />Addition</label></td>
+      <td><label><input type="radio" name="Operators" onclick="reset_Operators();" />Subtraction</label></td>
+    </tr>
+    <tr>
+      <td><label><input type="radio" name="Operators" onclick="reset_Operators();" />Multiplication</label></td>
+      <td><label><input type="radio" name="Operators" onclick="reset_Operators();" />Division</label></td>
+    </tr>
+  </table>
+  <br />
+  <br />           
+  <input type="submit" value="Calculate" onclick="return solve();" />
+  <input type="submit" value="Rest" onclick="return reset();" />
+  <br />
+  <br />
+  <div id="math_Results"></div>
+</form>
+</body>
+</html>

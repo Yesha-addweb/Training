@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Drop List</title>
+<script type="text/javascript">
+    function reset_msg() {
+        var e = document.getElementById("dropdownview");
+        var optionSelIndex = e.options[e.selectedIndex].value;
+        var optionSelectedText = e.options[e.selectedIndex].text;
+        var txt = "";
+        var i;
+        if (optionSelIndex == 0) {
+            alert("Please select a Country");
+        }
+        if (optionSelIndex !== "1") {
+           document.getElementById('msg').innerHTML = optionSelectedText; 
+            return false;
+        }
+        else {
+             for (i = 1; i < e.length; i++) {
+                txt = txt + e.options[i].text + "<br>";
+                document.getElementById('msg').innerHTML = txt;
+            }
+        }
+        return true;
+    }
+</script>
+</head>
+<body>
+<h1>13. Drop Down List with 5 country name</h1>
+<div>
+    <span>Select The Country : </span>
+    <select id="dropdownview" onclick="reset_msg();">
+        <option value="0">Select</option>
+        <option value="1">All</option>
+        <option value="2">INDIA</option>
+        <option value="3">USA</option>
+        <option value="4">CANADA</option>
+        <option value="5">AUSTRALIA</option>
+        <option value="6">CHINA</option>
+    </select>
+</div>
+<br >
+YOUR COUNTRY IS:-  <label id="msg"></label><br />
+</body>
+</html>
