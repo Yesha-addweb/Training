@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CheckBox</title>
+	<script type="text/javascript">
+    function CHECK() {
+        var items = document.getElementsByName('country');
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type == 'checkbox')
+                items[i].checked = true;
+        }
+    }
+
+    function UNCHECK() {
+        var items = document.getElementsByName('country');
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].type == 'checkbox')
+                items[i].checked = false;
+        }
+    }			
+</script>
+</head>
+<body>
+<h1>7. USE OF CHECKBOOX CHECK / UNCHECK</h1>
+
+<big>Select your favourite accessories: </big><br />
+<label><input type="checkbox" name="country" value="US">US</label><br />
+<label><input type="checkbox" name="country" value="UK">UK</label><br />
+<label><input type="checkbox" name="country" value="India">India</label><br />
+<label><input type="checkbox" name="country" value="Asia Pacific">Asia Pacific</label><br />
+<label><input type="checkbox" name="country" value="Australia">Australia</label><br />
+<label><input type="checkbox" name="country" value="Middle East">Middle East</label>
+
+
+<p>
+	<label onclick='CHECK()'>CHECK <input type="checkbox" name="country" /></label>
+    <label onclick='UNCHECK()'>UNCHECK <input type="checkbox" /></label>
+
+</p>
+
+</body>
+</html>
