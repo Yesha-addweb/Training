@@ -1,0 +1,405 @@
+header .mainheader{
+	position: relative;
+}
+
+header .mainheader .logo {
+	position: absolute;
+    color: #FFFFFF;
+}
+
+header .mainheader .logo h1{
+	margin: 0px;
+}
+
+header .mainheader .logo small{
+	margin: 0px;
+}
+
+header .rightimg{
+	position: absolute;
+	padding-top: 18px;
+	top: 0px;
+    right: 0;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.main-content .banner img {
+	width: 100%;
+	height: 320px;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.main-content .container .rightside{
+	position: static;
+	display: inherit;
+	padding-top: 20px;
+	margin-top: -20px;
+	background-color: #FFFFFF;
+}
+
+.main-content .container .rightside .about {
+	background-image: url("../serkit.jpeg");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 100% 100%;
+	height: 100%;
+}
+
+.main-content .container .rightside .about .it{
+	list-style: none;	
+	margin: 0px;
+	padding: 42px;
+	padding-top: 45px;
+	background-color: rgba(112, 26, 27, .6);
+	height: 100%;
+}
+
+.main-content .container .rightside .about .it .wwa{
+	margin: 0px;
+	text-align: center;
+  	font-size: 30px;
+  	color: #FFFFFF;
+}
+
+.main-content .container .rightside .about .it .para{
+	margin: 0px;
+	text-align: center;
+  	color: #FFFFFF;
+  	font-size: 16px;
+}
+
+.main-content .container .rightside .listabout {
+	background-image: url("../serkit.jpeg");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 100% 100%;
+	height: 100%;
+}
+
+.main-content .container .rightside .listabout .la{
+	list-style: none;	
+	margin: 0px;
+	padding: 43px;
+	padding-top: 44px;
+	background-color: rgba(47, 77, 127, .6); 
+	height: 100%;
+}
+
+.main-content .container .rightside .listabout .la .wwd{
+	margin: 0px;
+	text-align: center;
+  	font-size: 30px;
+  	color: #FFFFFF;
+}
+
+.main-content .container .rightside .listabout .la .para{
+	margin: 0px;
+	text-align: center;
+  	color: #FFFFFF;
+  	font-size: 16px;
+}
+
+.main-content .container .rightside .aboutlist {
+	background-image: url("../chinesedoor.jpeg");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 100% 100%;
+	height: 100%;
+}
+
+.main-content .container .rightside .aboutlist .services{
+	list-style: none;	
+	margin: 0px;
+	padding: 33px;
+	padding-top: 52px;
+	background-color: rgba(129, 31, 32, .6);
+	height: 100%;
+}
+.main-content .container .rightside .aboutlist .services .os{
+	margin: 0px;
+	text-align: center;
+  	font-size: 30px;
+  	color: #FFFFFF;
+}
+
+.main-content .container .rightside .aboutlist .services .para{
+	margin: 0px;
+	text-align: center;
+  	color: #FFFFFF;
+  	font-size: 16px;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.main-content .container .description{
+	border-bottom: 1px solid #aaa;  
+	width: 100%;
+	padding-top: 40px;
+}
+
+.main-content .container .description p{
+	display: block;
+	color: #8f001d;
+	font-size: 20px;
+	font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.main-content .dailynews {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}	
+
+.main-content .dailynews .Marbridge h2 {
+	color: #8f001d;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+	font-size: 30px;
+}
+
+.main-content .dailynews .Marbridge p{
+	font-size: 1em;
+    font-weight: normal;
+    line-height: 1.65em;
+    color: #454647;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper {
+	width: 100%;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .login{
+	float: left;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .main{
+	float: right;
+	width: 56%
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .login img.daily-image{
+	display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .login a.main-button{
+	color: #ffffff;
+    display: block;
+    line-height: 15px;
+    font-size: 17px;
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #8f001d;
+    width: 100%;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .login .main-button{
+	clear: left;
+	width: 50%;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .main h3{
+	font-size: 20px;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .main h3{
+    color: #00278c;	
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .main h4{
+	margin: 0 0 0.5em 0;
+	font-size: 0.9em;
+    font-weight: normal;
+    color: #454647;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .main h4 span.article-date{
+	color: #8f001d;
+}
+
+.main-content .dailynews .Marbridge .daily-wrapper .main p{
+	display: block;
+	font-size: 15px;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.main-content .dailynews .News .newslink h2{
+	border-bottom: 1px solid #aaa;  
+	width: 100%;
+	padding-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.main-content .dailynews .News .newslink h2 a{
+	color: #8f001d;
+	text-decoration: none;
+}
+
+.main-content .dailynews .News .newslink ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item{
+	font-size: 20px;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item{
+	border-bottom: 1px solid #aaa;
+    display: inline-block;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item .image-container{
+	text-align: center;
+    margin: 0;
+    padding: 0px;
+    width: 18%;
+    float: left;
+    margin-right: 2%;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item .image-container img{
+	max-width: 100%;
+	padding-top: 10px;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item .details{
+    padding: 0px;
+    float: left;
+    width: 80%;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item .details h3{
+	display: inline-block;
+	font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item .details h3 a{
+    color: #00278c;
+    text-decoration: none;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item .details h4 small.title{
+	font-size: 12px;
+	color: #454647;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item .details h4{
+	font-size: 13px;
+	color: #8f001d;
+}
+
+.main-content .dailynews .News .newslink ul li.news-item:last-child{
+	border-bottom: none; 
+}
+
+/*--------------------------------------------------------------------------*/
+
+.main-content  .Report {
+    margin: 0px;
+    padding-bottom: 50px;
+}
+
+.main-content  .Report .container {
+	width: 100%;
+	background-color: #f6f6f6;
+	border-top: 3px solid #ddd;
+	padding-bottom: 20px;
+}
+
+.main-content  .Report .container .listreport .report-container{
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	margin: 10px;
+	padding-top: 20px;
+}
+
+.main-content  .Report .container .report h3 a{
+    color: #8f001d;
+    font-weight: 600;
+    
+}
+
+.main-content  .Report .container .report h3{
+	background-size: 320px auto;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+.main-content  .Report .container .report .listreport ul {
+	display: flex;
+	list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-content  .Report .container .report .listreport ul li{
+	border-bottom: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-content  .Report .container .report .listreport ul li.report-container{
+	background-color: #fff;
+    text-align: center;
+    padding: 5%;
+}
+
+.main-content  .Report  .container  .report  .listreport  ul  li .report-container img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+	margin-bottom: 10px;
+}
+
+.main-content .Report .container .report .listreport ul li .report-container a.detail{
+	display: block;
+	color: #8f001d;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+/*--------------------------------------------------------------------------*/
+
+footer {
+	color: #ffffff;
+    background-color: #133558;
+    position: relative;
+}
+
+footer p{
+	font-size: 1em;
+    padding: 3.4em 0;
+    margin-right: 10%;
+    text-align: right;
+}
