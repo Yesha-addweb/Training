@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multie Span</title>
+    <script>
+        function reset_msg() {
+            var subject = document.getElementsByName("subject");
+            if (subject[0].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: PHP</span><br /><br />';
+                document.getElementById('php').style = '';
+                document.getElementById('asp.net').style = 'display:none';
+                document.getElementById('other').style = 'display:none';
+                return false;
+            } 
+            else if (subject[1].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: ASP.NET</span><br /><br />';
+                document.getElementById('asp.net').style = '';
+                document.getElementById('php').style = 'display:none';
+                return false;
+            } 
+            else if (subject[2].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: ASP</span><br /><br />';
+                document.getElementById('asp').style = '';
+                document.getElementById('php').style = 'display:none';
+                document.getElementById('asp.net').style = 'display:none';
+
+                return false;
+            } 
+            else if (subject[3].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: JSP</span><br /><br />';
+                document.getElementById('jsp').style = '';
+                document.getElementById('php').style = 'display:none';
+                document.getElementById('asp.net').style = 'display:none';
+                document.getElementById('asp').style = 'display:none';
+                return false;
+            } 
+            else if (subject[4].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: PERL</span><br /><br />';
+                document.getElementById('perl').style = '';
+                document.getElementById('php').style = 'display:none';
+                document.getElementById('asp.net').style = 'display:none';
+                document.getElementById('asp').style = 'display:none';
+                document.getElementById('jsp').style = 'display:none';
+                return false;
+            } 
+            else if (subject[5].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: COLD FUSION</span><br /><br />';
+                document.getElementById('coldfusion').style = '';
+                document.getElementById('php').style = 'display:none';
+                document.getElementById('asp.net').style = 'display:none';
+                document.getElementById('asp').style = 'display:none';
+                document.getElementById('jsp').style = 'display:none';
+                document.getElementById('perl').style = 'display:none';
+                return false;
+            } 
+            else if (subject[6].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: OTHER</span><br /><br />';
+                document.getElementById('other').style = '';
+                document.getElementById('php').style = 'display:none';
+                document.getElementById('asp.net').style = 'display:none';
+                document.getElementById('asp').style = 'display:none';
+                document.getElementById('jsp').style = 'display:none';
+                document.getElementById('perl').style = 'display:none';
+                document.getElementById('coldfusion').style = 'display:none';
+                return false;
+            } 
+            document.getElementsByClassName("message").innerHTML = " ";
+            return true;
+        }
+    </script>
+</head>
+<body>
+<h1>5. RADIO BUTTON ALERT MESSAGE WITH THE USE OF MULTIPLE SPAN</h1>
+
+<form action="" method="POST">
+    <label>
+        Please select your technology:-
+    </label><br />
+    <span id="php" class="message" style="display: none;">You Have Selected: PHP</span>
+    <label>
+        <input type="radio" name="subject" value="php" onclick="reset_msg();" /> PHP 
+    </label><br />
+    <span id="asp.net" class="message" style="display: none;">You Have Selected: ASP.NET</span>
+    <label>
+        <input type="radio" name="subject" value="aspnet" onclick="reset_msg();" /> ASP.NET 
+    </label><br />
+    <span id="asp" class="message" style="display: none;">You Have Selected: ASP</span>
+    <label>
+        <input type="radio" name="subject" value="asp" onclick="reset_msg();" /> ASP 
+    </label><br />
+    <span id="jsp" class="message" style="display: none;">You Have Selected: JSP</span>
+    <label>
+        <input type="radio" name="subject" value="jsp" onclick="reset_msg();" /> JSP 
+    </label><br />
+    <span id="perl" class="message" style="display: none;">You Have Selected: PERL</span>
+    <label>
+        <input type="radio" name="subject" value="perl" onclick="reset_msg();" /> PERL 
+    </label><br />
+    <span id="coldfusion" class="message" style="display: none;">You Have Selected: coldfusion</span>
+    <label>
+        <input type="radio" name="subject" value="coldfusion" onclick="reset_msg();" /> COLD FUSION 
+    </label><br />
+    <span id="other" class="message" style="display: none;">You Have Selected: Other</span>
+    <label>
+        <input type="radio" name="subject" value="other" onclick="reset_msg();" /> OTHER 
+    </label>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Single Span</title>
+    <script>
+        function reset_msg() {
+            var subject = document.getElementsByName("subject");
+            if (subject[0].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: PHP</span><br /><br />';
+                document.getElementById('php').innerHTML = s;
+                return false;
+            } 
+            else if (subject[1].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: ASP.NET</span><br /><br />';
+                document.getElementById('asp.net').innerHTML = s;
+                return false;
+            } 
+            else if (subject[2].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: ASP</span><br /><br />';
+                document.getElementById('asp').innerHTML = s;
+                return false;
+            } 
+            else if (subject[3].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: JSP</span><br /><br />';
+                document.getElementById('jsp').innerHTML = s;
+                return false;
+            } 
+            else if (subject[4].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: PERL</span><br /><br />';
+                document.getElementById('perl').innerHTML = s;
+                return false;
+            } 
+            else if (subject[5].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: COLD FUSION</span><br /><br />';
+                document.getElementById('coldfusion').innerHTML = s;
+                return false;
+            } 
+            else if (subject[6].checked == true) {
+                var s = '<span style="color:red;">You Have Selected: OTHER</span><br /><br />';
+                document.getElementById('other').innerHTML = s;
+                return false;
+            } 
+            document.getElementById("sub").innerHTML = " ";
+            return true;
+        }
+    </script>
+</head>
+<body>
+<h1>4. RADIO BUTTON ALERT MESSAGE WITH THE USE OF SINGLE SPAN</h1>
+
+<form action="" method="POST">
+    <label>
+        Please select your technology:-
+    </label><br />
+    <div id="sub" >
+    <span id="php" class="message"></span>
+    <span id="asp.net" class="message"></span>
+    <span id="asp" class="message"></span>
+    <span id="jsp" class="message"></span>
+    <span id="perl" class="message"></span>
+    <span id="coldfusion" class="message"></span>
+    <span id="other" class="message"></span>
+    </div>
+    <label>
+        <input type="radio" name="subject" value="php" onclick="reset_msg();" /> PHP 
+    </label><br />
+    <label>
+        <input type="radio" name="subject" value="aspnet" onclick="reset_msg();" /> ASP.NET 
+    </label><br />
+    <label>
+        <input type="radio" name="subject" value="asp" onclick="reset_msg();" /> ASP 
+    </label><br />
+    <label>
+        <input type="radio" name="subject" value="jsp" onclick="reset_msg();" /> JSP 
+    </label><br />
+    <label>
+        <input type="radio" name="subject" value="perl" onclick="reset_msg();" /> PERL 
+    </label><br />
+    <label>
+        <input type="radio" name="subject" value="coldfusion" onclick="reset_msg();" /> COLD FUSION 
+    </label><br />
+    <label>
+        <input type="radio" name="subject" value="other" onclick="reset_msg();" /> OTHER 
+    </label>
+</form>
+
+
+</body>
+</html>

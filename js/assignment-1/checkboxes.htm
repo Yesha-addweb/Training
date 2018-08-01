@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var customers = new Array();
+            customers.push(["US"]);
+            customers.push(["UK"]);
+            customers.push(["INDIA"]);
+            customers.push(["Asia Pacific"]);
+            customers.push(["Australia"]);
+            customers.push(["Middle East"]);
+
+ 
+            //Add the data rows.
+            for (var i = 0; i < customers.length; i++) {
+                //Get the reference of the HTML Table.
+                var table = document.getElementById("tblCustomers");
+ 
+                //Add Row.
+                row = table.insertRow(-1);
+ 
+                //Add CheckBox cell at First position.
+                var cell = row.insertCell(0);
+                var chk = document.createElement("INPUT");
+                chk.type = "checkbox";
+                chk.setAttribute("onclick", "CheckUncheckHeader()");
+                cell.appendChild(chk);
+                cell.innerHTML += customers[i][0];
+            }
+        };
+ 
+        function CheckUncheckAll(chkAll) {
+            //Fetch all rows of the Table.
+            var rows = document.getElementById("tblCustomers").rows;
+ 
+            //Execute loop on all rows excluding the Header row.
+            for (var i = 1; i < rows.length; i++) {
+                rows[i].getElementsByTagName("INPUT")[0].checked = chkAll.checked;
+            }
+        };
+ 
+        function CheckUncheckHeader() {
+           //Determine the reference CheckBox in Header row.
+            var chkAll = document.getElementById("chkAll");
+ 
+            //By default set to Checked.
+            chkAll.checked = true;
+ 
+            //Fetch all rows of the Table.
+            var rows = document.getElementById("tblCustomers").rows;
+ 
+            //Execute loop on all rows excluding the Header row.
+            for (var i = 1; i < rows.length; i++) {
+                if (!rows[i].getElementsByTagName("INPUT")[0].checked) {
+                    chkAll.checked = false;
+                    break;
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>7. USE OF CHECKBOOX CHECK / UNCHECK</h1>
+
+    <p>Select Your Favourite Accessories</p>
+    <table id="tblCustomers">
+        <tr>
+            <th>
+                <input type="checkbox" id="chkAll" onclick="CheckUncheckAll(this)" />Select All
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

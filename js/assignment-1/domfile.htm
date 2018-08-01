@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TEXTBOX</title>
+  <script type="text/javascript">
+    
+
+    function AddTextBox() 
+    {
+      var a, i, x;
+      a = Number(document.getElementById("number").value);
+      if(a == '')
+      {
+            alert("Please enter value");
+            return false;
+      }
+      if(Number.isNaN(a)) 
+      {
+            alert("Please enter only numberic values");
+            return false;
+      }
+      else{
+        createTextbox(a);
+      }
+    }
+    function createTextbox(a)
+    {
+      for(i = 1; i <= a; i++){
+        var Textbox = document.createElement("INPUT");
+        var Button = document.createElement('a');
+        var div = document.createElement('DIV');
+        Textbox.setAttribute("type", "text");
+        Textbox.setAttribute("value", a);
+        var linkText = document.createTextNode( "Remove");
+        Button.appendChild(linkText);
+        Button.href = "#";
+        Button.onclick = function() {
+          RemoveTextBox(this.id);
+        }
+        div.setAttribute("id", "div" +i);
+        Button.setAttribute("id", i);
+        div.appendChild(Textbox);
+        div.appendChild(Button);
+        document.body.appendChild(div);
+
+      }
+    }
+    function RemoveTextBox(a) 
+    {
+      var r = confirm("Are You Sure Want To Remove The TextBox");
+      if (r == true) 
+      {
+        var value = document.getElementById("div" +a);
+        value.parentNode.removeChild(value);
+      }
+    }
+
+  </script>
+  </head>
+  <body>
+    <h1>Take 1 Textbox and what the number you put in the textbox that related other textbox will come with the number and if the user remove it then that textbox will remove.</h1>
+    <form id="form1" runat="server">
+      <input type="text" name="number" id="number" placeholder="Enter The Number">
+      <input id="btnAdd" type="button" value="SUBMIT" onclick="AddTextBox()" />
+      <br />
+      <br />
+      <div id="TextBoxContainer">
+          <!--Textboxes will be added here -->
+      </div>
+    </form>
+  </body>
+</html>

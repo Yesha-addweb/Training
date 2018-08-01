@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Popup2</title>
+  	<script>
+  		function myFunction() {
+		    var myWindow = window.open("", "", "top= 100, left=100, height=200, width=400, resize=false, toolbar=no, addressbar= no");
+		    myWindow.document.write("<p>Welcome and please agree with our Terms and Conditions</p>");
+        window.close();
+		}
+  	</script>
+  </head>
+  <body>
+    <h1>11. A Statement & A Button</h1>
+
+  	<div class="main-content">
+  		<button onclick="myFunction()">Submit</button>
+  		<button><a href="self.close()">Close</a></button>
+
+  	</div>
+  </body>
+</html>

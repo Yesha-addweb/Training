@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Data Validation</title>
+      <script>
+        function validatedate(inputText)
+          {
+            var dateformat = /^(0?[1-9]|1[0123])[-](0?[1-9]|[123][0-9]|1[01])[-]\d{2}$/;
+            if(inputText.value.match(dateformat))
+            {
+              document.form1.text1.focus();
+              var opera1 = inputText.value.split('-');
+              lopera1 = opera1.length;
+              if (lopera1>1)
+              {
+                var pdate = inputText.value.split('-');
+              }
+              var mm  = parseInt(pdate[0]);
+              var dd = parseInt(pdate[1]);
+              var yy = parseInt(pdate[2]);
+              if (mm < 1 || mm > 12)
+              {
+                alert("Month must be between 1 and 12");
+                return false;
+              }  
+              if (dd < 1 || dd > 31)
+              {
+                alert("Date must be between 1 and 31");
+                return false;
+              }
+              if (mm==2)
+              {
+                var lyear = false;
+                if ( (!(yy % 4) && yy % 100) || !(yy % 400)) 
+                {
+                  lyear = true;
+                }
+                if ((lyear==false) && (dd>=29))
+                {
+                  alert('Invalid Year. Date should be within the range 1 to 28!');
+                  return false;
+                }
+                if ((lyear==true) && (dd>29))
+                {
+                  alert('"Invalid Year. Date should be within the range 1 to 29!');
+                  return false;
+                }
+              }
+              alert("Valid Date");
+              return true;
+            }
+            else
+            {
+              alert("Invalid Date. Please enter date in MM-DD-YY format!");
+              document.form1.text1.focus();
+              return false;
+            }
+          } 
+      </script>
+    </head>
+    <body onload='document.form1.text1.focus()'>
+      <div class="mail">
+        <h1>8. DATE VALIDATION</h1>
+        <form name="form1" action="#">
+          <ul style="list-style: none;">
+            <li>
+              Enter Date:-<input type='text' name='text1' placeholder="MM-DD-YY" />
+            </li>
+            <li>&nbsp;</li>
+            <li class="submit">
+              <input type="submit" name="submit" value="Submit" onclick="validatedate(document.form1.text1)"/>
+            </li>
+            <li>&nbsp;</li>
+          </ul>
+        </form>
+      </div>
+    </body>
+  </html>

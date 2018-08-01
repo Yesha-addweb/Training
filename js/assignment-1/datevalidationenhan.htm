@@ -1,0 +1,84 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title>Date Validation Enhan</title>
+        <script>
+            function validatedate(inputText)
+            {
+              var dateformat = /^(0?[1-9]|[123][0-9]|3[01])(0?[1-9]|1[0123])\d{4}$/;
+              if(inputText.value.match(dateformat))
+              {
+                  document.form1.text1.focus();
+                  var opera1 = inputText.value.split('');
+                  var dd = parseInt(opera1[0] + opera1[1]);
+                  var mm  = parseInt(opera1[2] + opera1[3]);
+                  var yy = parseInt(opera1[4] + opera1[5] + opera1[6] + opera1[7]); 
+                  
+                  var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
+                  if (mm==1 || mm>2)
+                  {
+                    if (dd>ListofDays[mm-1])
+                    {
+                      alert('Invalid Date:- Month doesnt have 31 date');
+                      return false;
+                    }
+                  }   
+                  if (mm < 1 || mm > 12)
+                  {
+                    alert("Month must be between 1 and 12");
+                    return false;
+                  }  
+                  if (dd < 1 || dd > 31)
+                  {
+                    alert("Date must be between 1 and 31");
+                    return false;
+                  }
+                  if (mm==2)
+                  {
+                    var lyear = false;
+                    if ( (!(yy % 4) && yy % 100) || !(yy % 400)) 
+                    {
+                      lyear = true;
+                    }
+                    if ((lyear==false) && (dd>=29))
+                    {
+                      alert('Invalid Year. Date should be within the range 1 to 28!');
+                      return false;
+                    }
+                    if ((lyear==true) && (dd>29))
+                    {
+                      alert('"Invalid Year. Date should be within the range 1 to 29!');
+                      return false;
+                    }
+                  }
+                  alert("Valid Date");
+                  return true;
+                }
+                else
+                {
+                  alert("Invalid Date. Please enter date in MM-DD-YY format!");
+                  document.form1.text1.focus();
+                  return false;
+                }
+            }
+        </script>   
+    </head>
+    <body>
+        <div class="mail">
+            <h1>9. DATE VALIDATION ENHAN</h1>
+            <form name="form1" action="#"> 
+                <ul style="list-style: none;">
+                    <li>
+                        Enter Date:-<input type='text' name='text1' placeholder="DDMMYYYY" />
+                    </li>
+                    <li>&nbsp;</li>
+                    <li class="submit">
+                        <input type="submit" name="submit" value="Submit" onclick="validatedate(document.form1.text1)"/>
+                    </li>
+                    <li>&nbsp;</li>
+                </ul>
+            </form>
+        </div>
+    </body>
+</html> 
+

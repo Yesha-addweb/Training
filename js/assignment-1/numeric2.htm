@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Numeric 2</title>
+	<script>
+		function textbox(objButton)
+		{	
+			var a;
+    		a = Number(document.getElementById("number").value);
+    		
+    		if(a == '') {
+		        alert("Please enter any numeric value");
+      			myforms.number.value.focus();
+		        return false;
+		    }
+		    else if(a%1 != 0) {
+		        alert("Only numeric values are allowed. Please re-enter the value");
+		        return false;
+		    }
+		    else {
+		    	alert("Entered value is a numeric value");
+    			return false;
+		    }
+		}
+	</script>
+</head>
+<body>
+<h1>2. TEXT BOX ALERT WITHOUT USE OF ISNAN FUNCTION</h1>
+<form>
+	<input type="text" name="number" id="number" />
+	<input type="submit" value="submit" onclick="textbox(this)" />
+</form>
+</body>
+</html>

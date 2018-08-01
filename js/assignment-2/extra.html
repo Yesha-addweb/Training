@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TEXTBOX</title>
+    <script type="text/javascript">
+        //debugger; 
+        function TextBox(value){
+        
+            return '<input name= "TextBox" id="TextBox" type="text" value = "' + value + '" />' + " " + '<a href="#" class="button js-button" role="button" onclick="RemoveTextBox(this)">Remove</a>'
+        }
+
+        function AddTextBox() {
+            var a, i, x;
+            a = Number(document.getElementById("number").value);
+            if(a == '') {
+                alert("Please enter value");
+                return false;
+            }
+            if(Number.isNaN(a)) {
+                alert("Please enter only numberic values");
+                return false;
+            }
+            for(i = 1; i <= a; i++){
+                x = document.createElement("input");
+                x = document.createElement('DIV');
+                x.innerHTML = TextBox(a);
+                document.body.appendChild(x);
+            }
+            
+        }
+
+        function RemoveTextBox(x) {
+            var r = confirm("Are You Sure Want To Remove The TextBox");
+            if (r == true) {
+            document.body.removeChild(x.parentNode);
+            }
+        }
+ 
+        function RecreateTextboxes() {
+            var values = eval('<%=Values%>');
+            if (values != null) {
+                var h = "";
+                for (var i = 0; i < values.length; i++) {
+                    h = document.getElementById(TextBox(values[i]));
+                }
+                document.getElementById("TextBoxContainer").innerHTML = h;
+            }
+        }
+
+        window.onload = RecreateTextboxes;
+
+    </script>
+    </head>
+    <body>
+        <h1>Take 1 Textbox and what the number you put in the textbox that related other textbox will come with the number and if the user remove it then that textbox will remove.</h1>
+        <form id="form1" runat="server">
+            <input type="text" name="number" id="number" placeholder="Enter The Number">
+            <input id="btnAdd" type="button" value="SUBMIT" onclick="AddTextBox()" />
+            <br />
+            <br />
+            <div id="TextBoxContainer">
+              <!--Textboxes will be added here -->
+            </div>
+        </form>
+    </body>
+</html>
