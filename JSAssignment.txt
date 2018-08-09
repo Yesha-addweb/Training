@@ -1,7 +1,7 @@
 Create following HTML files (with proper designing and layout) and use Javascript to satisfy the below mentioned requirements.
 
 1) numeric1.htm
-	Requirement :
+	Requirement :-
 
 		- Check if the value entered in Text Box is a numeric value or not,
 			i.e., text characters and even null/empty values should not be allowed.
