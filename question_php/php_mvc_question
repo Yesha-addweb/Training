@@ -1,0 +1,24 @@
+1.)	Given me a referance program of mvc and want to insert 2 column which is image and address and in image column have to insert the image and remove button. If the user will click on remove button then the image and the button both will remove and the chose file will insert with the help of ajax.
+
+2.)	The second mvc task was to make 2 table on product and category:-
+
+		Products
+		=======
+		- Name
+		- Category (able to select multiple category)
+		- Image (Multiple Image support based on config variable)
+		- Price
+		- Quantity
+		- Status (Active/Inactive) - This is link on listing view from where user will be able to toggle the status
+		- Edit
+		- Delete (Soft Delete record)
+
+		Category
+		=======
+		- Name (With count of active products)
+		- Status (Active/Inactive) - This is link on listing view from where user will be able to toggle the status
+		- Image (Single image support)
+		- Edit
+		- Delete (Soft Delete record)
+
+	have to make program on insert, update and delete. 
